@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import 'antd/dist/antd.min.css';
 import './App.css';
 import MyButton from "./components/MyButton";
+import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </a>
           <DatePicker/>
           <MyButton value="pidaraz" />
+          <HeaderMenu />
       </header>
     </div>
   );
