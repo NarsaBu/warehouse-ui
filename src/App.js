@@ -2,9 +2,9 @@ import React from 'react';
 import { DatePicker } from 'antd';
 import 'antd/dist/antd.min.css';
 import './App.css';
-import MyButton from "./components/MyButton";
 import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
 import MyTable from './components/MyTable';
+import Spinner from "./components/Spinner";
 
 function App() {
     return (
@@ -13,6 +13,7 @@ function App() {
 
                 <DatePicker />
                 <HeaderMenu />
+                <Spinner />
             </header>
             <main>
                 <MyTable />
