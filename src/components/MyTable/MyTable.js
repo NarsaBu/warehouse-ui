@@ -1,9 +1,38 @@
+import React from 'react';
 import { Table, Tag, Space } from 'antd';
 
-ReactDOM.render(<Table columns={columns} dataSource={data} />, mountNode);
 
-export default function MyTable(props) {
-    const columns = [
+const MyTable = ({ tableData, tableColumns }) => {
+
+    return <Table columns={tableColumns} dataSource={tableData} />
+
+}
+
+MyTable.defaultProps = {
+    tableData: [
+        {
+            key: '1',
+            name: 'John Brown',
+            age: 32,
+            address: 'New York No. 1 Lake Park',
+            tags: ['nice', 'developer'],
+        },
+        {
+            key: '2',
+            name: 'Jim Green',
+            age: 42,
+            address: 'London No. 1 Lake Park',
+            tags: ['loser'],
+        },
+        {
+            key: '3',
+            name: 'Joe Black',
+            age: 32,
+            address: 'Sidney No. 1 Lake Park',
+            tags: ['cool', 'teacher'],
+        },
+    ],
+    tableColumns: [
         {
             title: 'Name',
             dataIndex: 'name',
@@ -50,33 +79,8 @@ export default function MyTable(props) {
                 </Space>
             ),
         },
-    ];
-    const {tableData, columns} = props;
-
-    return (
-        <Table columns={
-            const data = [
-        {
-            key: '1',
-            name: 'John Brown',
-            age: 32,
-            address: 'New York No. 1 Lake Park',
-            tags: ['nice', 'developer'],
-        },
-        {
-            key: '2',
-            name: 'Jim Green',
-            age: 42,
-            address: 'London No. 1 Lake Park',
-            tags: ['loser'],
-        },
-        {
-            key: '3',
-            name: 'Joe Black',
-            age: 32,
-            address: 'Sidney No. 1 Lake Park',
-            tags: ['cool', 'teacher'],
-        },
-            ];} dataSource={tableData} />
-    )
+    ]
 }
+
+export default MyTable;
+
