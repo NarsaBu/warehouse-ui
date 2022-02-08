@@ -10,13 +10,11 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-
                 <DatePicker />
                 <HeaderMenu />
-                <Spinner />
             </header>
             <main>
-                <MyTable />
+                <Spinner isLoading><MyTable /></Spinner>
             </main>
         </div>
     );
