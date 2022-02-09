@@ -1,8 +1,11 @@
 import { Spin } from 'antd';
-import React from "react";
+import React, { useState } from "react";
 import styles from './Spinner.module.scss';
 
-const Spinner = ({ isLoading, children }) => {
+const Spinner = ({children }) => {
+    const [isLoading, toggleLoading] = useState(true);
+    
+    const startLoading = isLoading && !children;
     const loadingAndChildren = isLoading && children;
     const childrenLoaded = !isLoading && children;
     if (loadingAndChildren) {
