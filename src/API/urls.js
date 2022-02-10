@@ -3,5 +3,13 @@ export const DEFAULT_PATH = Object.freeze({
 });
 
 export const ROUTES = Object.freeze({
-    consumableName: '/consumableName'
+    consumableName: '/consumableName',
+    instrumentName: 'instrumentName',
+    equipmentName: 'equipmentName',
+    supplier: '/supplier',
+    recipient: 'recipient',
+    endUser: '/endUser',
+    consumable: '/consumable',
+    instrument: '/instrument',
+    equipment: '/equipment',
 });
